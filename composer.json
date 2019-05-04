@@ -5,6 +5,7 @@
     "keywords": ["boleto", "boleto bancario"],
     "homepage": "http://github.com/openboleto/openboleto",
     "license": "MIT",
+    "minimum-stability": "RC",
     "authors": [
         {
             "name": "José Frederico",
