@@ -76,10 +76,14 @@ class Sicoob extends BoletoAbstract
     */
     protected $localPagamento = 'Pagável preferencialmente no Sicoob';
 
+
+    protected $modalidades = ["01", "02", "05"];
+
     /**
      * Gera o Nosso Número.
      *
      * @return string
+     * @throws Exception
      */
     protected function gerarNossoNumero()
     {
@@ -149,12 +153,12 @@ class Sicoob extends BoletoAbstract
      *
      * @param type $modalidade
      * @return \OpenBoleto\Banco\Sicoob
-     * @throws Exception
+     * @throws \Exception
      */
     public function setModalidade($modalidade)
     {
         if (!in_array($modalidade, $this->getModalidades())) {
-            throw new Exception("Modalidade não disponível!");
+            throw new \Exception("Modalidade não disponível!");
         }
 
         $this->modalidade = $modalidade;
