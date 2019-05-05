@@ -77,7 +77,7 @@ class Sicoob extends BoletoAbstract
     protected $localPagamento = 'Pagável preferencialmente no Sicoob';
 
 
-    protected $modalidades = ["01", "02", "05"];
+    protected $modalidades = array("01", "02", "05");
 
     /**
      * Gera o Nosso Número.
